@@ -1,4 +1,4 @@
-## chaos-monkey-spring-boot
+## Chaos Monkey with Springboot
 
 ----------------------------------
 ## PRINCIPLES OF CHAOS ENGINEERING
