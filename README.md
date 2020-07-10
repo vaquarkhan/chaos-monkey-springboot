@@ -1,6 +1,9 @@
 ## chaos-monkey-spring-boot
 
 ----------------------------------
+## PRINCIPLES OF CHAOS ENGINEERING
+
+- https://principlesofchaos.org/?lang=ENcontent
 
 Chaos Monkey the solution, based on the idea behind Nelflix's tool, designed to test Spring Boot applications.
 There are two required steps for enabling Chaos Monkey for a Spring Boot application. 
@@ -369,9 +372,9 @@ https://coggle.it/diagram/WiKceGDAwgABrmyv/t/chaos-engineeringcompanies%2C-peopl
 
 ## Tools:
 
-Spinnaker: https://www.spinnaker.io/. Netflix Chaos Monkey does not support deployments that are managed by anything other than Spinnaker. That makes it pretty hard to use Chaos Monkey from Netflix.
-
 ChaosMonkey for SpringBoot: https://docs.chaostoolkit.org/drivers/cloudfoundry/. Very easy to follow instructions. Easy to turn on/off using Spring profile.
+
+Spinnaker: https://www.spinnaker.io/. Netflix Chaos Monkey does not support deployments that are managed by anything other than Spinnaker. That makes it pretty hard to use Chaos Monkey from Netflix.
 
 Chaos Toolkit - https://docs.chaostoolkit.org/drivers/cloudfoundry/. This tool is particularly helpful to my situation since my applications are deployed in Cloud Foundry and this tool has a CloudFoundry extension. Pretty elaborate, but easy to follow instructions. My preferred tool so far.
 
@@ -381,6 +384,7 @@ Gramlin -https://www.gremlin.com/
 
 - https://www.youtube.com/watch?v=-smx0-qeurw
 - https://www.youtube.com/embed/cefJd2v037U
+- https://netflix.github.io/chaosmonkey/
 - https://chaostoolkit.org/
-
+- https://codecentric.github.io/chaos-monkey-spring-boot/
 
