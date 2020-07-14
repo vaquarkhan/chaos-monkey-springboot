@@ -518,3 +518,98 @@ public class StudentJdbcRepository {
 }
 
 ----------------------------------------------------
+
+StudentController
+
+package com.khan.vaquar.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.khan.vaquar.demo.domain.Student;
+import com.khan.vaquar.demo.service.StuentService;
+
+@RestController
+public class StudentController {
+	
+
+	@Autowired
+	private StuentService stuentService;
+
+	@GetMapping("/students")
+	public List<Student> findAll() {
+		return stuentService.findAll();
+	}
+
+	@GetMapping("/student")
+	public Student findById(long id) {
+		return stuentService.findById(id);
+	}
+
+	@DeleteMapping("/student/delete")
+	public int deleteById(long id) {
+		return stuentService.deleteById(id);
+	}
+
+	@PostMapping("/student/create")
+	public int insert(@RequestBody Student student) {
+		return stuentService.insert(student);
+	}
+
+	@PutMapping("/student/update")
+	public int update(@RequestBody Student student) {
+		return stuentService.update(student);
+	}
+	@GetMapping("/sayHello")
+	public String sayHello(String name) {
+		return "Hello="+name;
+	}
+	@GetMapping("/sayGoodbye")
+	public String sayGoodbye(String name) {
+		return "Goodbye "+name;
+	}
+}
+----------------------
+StuentService
+
+package com.khan.vaquar.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.khan.vaquar.demo.domain.Student;
+import com.khan.vaquar.demo.repo.StudentJdbcRepository;
+@Service
+public class StuentService {
+	@Autowired
+	private StudentJdbcRepository studentJdbcRepository;
+	
+	public List<Student> findAll() {
+		return studentJdbcRepository.findAll();
+	}
+
+	public Student findById(long id) {
+		return studentJdbcRepository.findById(id);
+	}
+	public int deleteById(long id) {
+		return studentJdbcRepository.deleteById(id);
+	}
+
+	public int insert(Student student) {
+		return studentJdbcRepository.insert(student);
+	}
+
+	public int update(Student student) {
+		return studentJdbcRepository.update(student);
+	}
+
+}
