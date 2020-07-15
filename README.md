@@ -58,6 +58,11 @@ or
      
      management.endpoints.web.exposure.include=health,info,metrics,chaosmonkey
 
+--------------------------
+
+http://localhost:8080/students
+
+http://localhost:8080/student?id=10001
 
 --------------------------
 
